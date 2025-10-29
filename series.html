@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>TV Series | DJ Afro Movies Cinemax Pro</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+<header>
+    <div class="container header-container">
+        <a href="index.html" class="logo">
+            <i class="fas fa-film"></i>
+            <span class="full-text">DJ Afro Movies Cinemax Pro</span>
+            <span class="short-text">AfroMovies</span>
+        </a>
+        
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" id="search-input" placeholder="Search movies...">
+        </div>
+        
+        <button class="mobile-menu-btn" id="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</header>
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Premium TV Series</h1>
+            <p>Binge-watch your favorite TV shows with our extensive collection</p>
+        </div>
+    </section>
+
+    <!-- Series Catalog -->
+    <section class="featured">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">All Series</h2>
+                <div class="filter-options">
+                    <select id="series-genre-filter">
+                        <option value="all">All Genres</option>
+                        <option value="action">Action</option>
+                        <option value="comedy">Comedy</option>
+                        <option value="drama">Drama</option>
+                        <option value="sci-fi">Sci-Fi</option>
+                        <option value="thriller">Thriller</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="movies-grid" id="series-container">
+                <!-- Series will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Modal -->
+    <div class="modal" id="paymentModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Unlock This Content</h3>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="payment-steps">
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <div class="step-content">
+                            <h4>Send Payment</h4>
+                            <p>Send KSH 10 to M-Pesa number: <strong>0742 774 083</strong></p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <div class="step-content">
+                            <h4>Enter Transaction Code</h4>
+                            <p>After payment, enter the M-Pesa transaction code below:</p>
+                            <div class="payment-form">
+                                <div class="form-group">
+                                    <label for="transaction-code">Transaction Code</label>
+                                    <input type="text" id="transaction-code" placeholder="Enter M-Pesa code">
+                                </div>
+                                <button class="btn" id="confirm-payment">Confirm Payment</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Player -->
+    <div class="video-player" id="videoPlayer">
+        <div class="player-container">
+            <div class="player-header">
+                <h3 id="player-title">Series Title</h3>
+                <span class="close-player">&times;</span>
+            </div>
+            <div class="player-content">
+                <!-- Video will be embedded here -->
+                <div id="video-placeholder" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #000; color: #fff;">
+                    <div style="text-align: center;">
+                        <i class="fas fa-play-circle" style="font-size: 3rem; margin-bottom: 15px;"></i>
+                        <p>Your video will play here after payment confirmation</p>
+                        <p><small>Upload your video files to replace this placeholder</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>AfroMovies Cinemax Pro</h4>
+                    <p>Your premier destination for premium streaming entertainment. Quality content at affordable prices.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="movies.html">Movies</a></li>
+                        <li><a href="series.html">Series</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Payment Help</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get updates on new releases and special offers.</p>
+                    <div class="form-group" style="margin-top: 15px;">
+                        <input type="email" placeholder="Your email address" style="margin-bottom: 10px;">
+                        <button class="btn">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 AfroMovies Cinemax Pro. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
