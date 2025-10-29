@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+ <meta name="viewport" content="width=1200, initial-scale=1.0">
+  <title>DJ Afro Movies Cinemax Pro — Movie</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">DJ AfroMovies Cinemax Pro</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="categories.html">Categories</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section" id="movieDetail">
+      <!-- Filled by js — includes thumbnail, metadata, synopsis, pay CTA, and video player placeholder -->
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="yearFooter"></span> DJ Afro Movies Cinemax Pro</p>
+    </div>
+  </footer>
+
+  <!-- Reuse pay modal from index (created by index or script) -->
+  <div id="payModal" class="modal hidden" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" id="payModalClose">&times;</button>
+      <h3>Pay to Watch</h3>
+      <p>Send <strong>Ksh 10</strong> via M-Pesa to <strong>0742774083</strong>.</p>
+      <label for="mpesaCode">M-Pesa transaction code</label>
+      <input id="mpesaCode" placeholder="e.g. ABC123XYZ" />
+
+      <label for="payerPhone">Phone number (used for record)</label>
+      <input id="payerPhone" placeholder="07XXXXXXXX" />
+
+      <label for="payerEmail">Email (optional)</label>
+      <input id="payerEmail" placeholder="you@example.com" />
+
+      <div class="modal-actions">
+        <button id="confirmPaymentBtn" class="btn primary">Confirm Payment</button>
+        <button id="cancelPaymentBtn" class="btn">Cancel</button>
+      </div>
+
+      <p class="note"><strong>Note:</strong> This demo simulates verification. For production you must verify M-Pesa transactions server-side using Safaricom APIs or your payment provider. See comments in <code>js/app.js</code>.</p>
+    </div>
+  </div>
+
+</body>
+</html>
